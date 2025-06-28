@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:frontend/create.dart';
 
 
 class HomePage extends StatefulWidget{
@@ -46,12 +47,14 @@ class HomePageState extends State<HomePage>{
               ),
             ),  
 
-            Container(
+            Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButton.icon(
-                    onPressed:(){},
+                    onPressed:(){
+                      Navigator.of(context).push(MaterialPageRoute(builder: (_)=>createScreen()));
+                    },
                      icon: Icon(Icons.create), 
                      label: Text("CREATE")),
                      Padding(padding: EdgeInsets.only(top: 20)),
